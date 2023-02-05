@@ -1,16 +1,15 @@
 import React from 'react';
 import Nav from './Nav.js';
-import Player from './Player.js';
+import Sound from '../screens/Sound.js'
+import '../styles/App.css'
 
 export const App = () => {
   return (
-    <>
+    <div id='app'>
       <Nav />
-      <h1>Music for your content that fits just right</h1>
-      {/* Should be the 3rd component to appear */}
-      <Player />
+      <Sound />
       <h2></h2>
-    </>
+    </div>
   )
 }
 
