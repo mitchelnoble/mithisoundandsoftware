@@ -8,7 +8,6 @@ export const App = () => {
     <div id='app'>
       <Nav />
       <Sound />
-      <h2></h2>
     </div>
   )
 }

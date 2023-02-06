@@ -1,0 +1,37 @@
+/* #sound {
+  margin-bottom: 1em;
+} */
+
+
+#headline {
+  margin-top: 1em;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 6.5rem;
+  background-image: linear-gradient(85deg,#FFFFFF,#d16942,#d14263);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#headline-description {
+  margin: 0 0 1em 0;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  background: #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+#button {
+  margin: 0.7em 0 4em 0;
+  text-align: center;
+}
+
+#pronounce {
+  font-size: 3rem;
+}
