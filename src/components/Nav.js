@@ -12,9 +12,30 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import { Link } from 'react-router-dom'
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/system';
 
 const pages = ['Sound', 'Software'];
 const menu = ['Sound', 'Software','About', 'Contact'];
+
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Fjalla One, Libre Baskerville',
+  },
+  palette: {
+    primary: {
+      // main: '#0971f1',
+      // darker: '#053e85',
+      main: '#000000',
+      darker: '#053e85',
+    },
+    neutral: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+  },
+});
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -48,7 +69,7 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              // fontFamily: 'monospace',
+              fontFamily: 'Fjalla One',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -67,7 +88,7 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              // fontFamily: 'monospace',
+              fontFamily: 'Fjalla One',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -76,12 +97,12 @@ function ResponsiveAppBar() {
           >
             Mithi
           </Typography>
-          <Box sx={{ mr: 4, flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end',  }}>
+          <Box sx={{ mr: 4, flexGrow: 1, fontFamily: 'Fjalla One', display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end',  }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'flex' }}
+                sx={{ my: 2, color: 'white', fontFamily: 'Fjalla One', display: 'flex' }}
               >
                 {page}
               </Button>
@@ -112,7 +133,7 @@ function ResponsiveAppBar() {
             >
               {menu.map((menuItem) => (
                 <MenuItem key={menuItem} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link style={{textDecoration: "none", color: "black"}} to={`/${menuItem}`}>{menuItem}</Link></Typography>
+                  <Typography textAlign="center" fontFamily={'Libre Baskerville'}><Link style={{textDecoration: "none", color: "black", fontFamily: "Fjalla One",}} to={`/${menuItem}`}>{menuItem}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>

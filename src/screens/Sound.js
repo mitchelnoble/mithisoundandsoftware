@@ -26,7 +26,7 @@ const theme = createTheme({
 const Sound = () => {
   return (
     <div id="sound">
-      <h1 id='headline'>Mithi <span id='pronounce'>[mee-thē]:</span> ideal</h1>
+      <h1 id='headline'>M i t h i <span id='pronounce'>[mee-thē]:</span> i d e a l</h1>
       <h3 id='headline-description'>music for your content</h3>
       <div id='button'>
         <ThemeProvider theme={theme}>
