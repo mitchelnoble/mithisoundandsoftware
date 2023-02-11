@@ -1,5 +1,6 @@
 import React from 'react';
 import Player from '../components/Player';
+import Playlists from '../components/Playlists';
 import { Button } from '@mui/material';
 import '../styles/Sound.css'
 import { createTheme } from '@mui/material/styles';
@@ -38,7 +39,12 @@ const Sound = () => {
       >Let's Talk Music</Button>
       </ThemeProvider>
       </div>
-      <Player />
+      {Playlists.map((e) => {
+        return (
+          <Player playlist={e.playlist} />
+        )
+      })
+      }
     </div>
   );
 };

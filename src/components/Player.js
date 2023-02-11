@@ -1,23 +1,15 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import playlists from './playlists';
+import '../styles/Player.css'
 import { Paper } from '@mui/material';
 
 
-const Player = () => {
+const Player = (props) => {
   return (
-    <div>
+    <div id='player-container'>
           <Paper>
             <ReactPlayer
-              url={ playlists.forGames }
-              className="soundcloud-react-player"
-              width="100%"
-            />
-          </Paper>
-      <br />
-      <Paper>
-            <ReactPlayer
-              url={ playlists.rebirth }
+              url={ props.playlist }
               className="soundcloud-react-player"
               width="100%"
             />
