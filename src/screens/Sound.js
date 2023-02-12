@@ -39,12 +39,15 @@ const Sound = () => {
       >Let's Talk Music</Button>
       </ThemeProvider>
       </div>
+      <div id="sound-gradient"></div>
+      <div id='player-container'>
       {Playlists.map((e) => {
         return (
           <Player playlist={e.playlist} />
         )
       })
       }
+      </div>
     </div>
   );
 };

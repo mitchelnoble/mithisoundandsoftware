@@ -6,7 +6,7 @@ import { Paper } from '@mui/material';
 
 const Player = (props) => {
   return (
-    <div id='player-container'>
+    <div id='player'>
           <Paper>
             <ReactPlayer
               url={ props.playlist }
