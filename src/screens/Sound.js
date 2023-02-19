@@ -43,7 +43,10 @@ const Sound = () => {
       <div id='player-container'>
       {Playlists.map((e) => {
         return (
-          <Player playlist={e.playlist} />
+          <Player
+            playlist={e.playlist}
+            key={e.id}
+          />
         )
       })
       }

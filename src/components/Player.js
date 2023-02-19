@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import '../styles/Player.css'
-import { Paper } from '@mui/material';
+import { Card, Paper } from '@mui/material';
 
 
 const Player = (props) => {
   return (
     <div id='player'>
-          <Paper>
+      <Card height='5em'>
+        <Paper elevation={8}>
             <ReactPlayer
               url={ props.playlist }
               className="soundcloud-react-player"
               width="100%"
             />
-          </Paper>
+        </Paper>
+      </Card>
     </div>
   );
 };
