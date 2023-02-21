@@ -1,0 +1,31 @@
+#description-container {
+padding: 2em;
+background-color: black;
+color: white;
+font-family: 'Fjalla One', sans-serif;
+font-size: 2.5rem;
+text-align: center;
+}
+
+#description-headline {
+  margin: 0 0 0.7em 0;
+  background-image: linear-gradient(90deg,#FFFFFF 25%,#d16942,#d14263);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#description-list {
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  margin: 0 0 0.5em 0;
+}

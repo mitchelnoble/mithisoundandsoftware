@@ -1,6 +1,7 @@
 import React from 'react';
 import Player from '../components/Player';
 import Playlists from '../components/Playlists';
+import Description from '../components/Description';
 import { Button } from '@mui/material';
 import '../styles/Sound.css'
 import { createTheme } from '@mui/material/styles';
@@ -39,7 +40,9 @@ const Sound = () => {
       >Let's Talk Music</Button>
       </ThemeProvider>
       </div>
-      <div id="sound-gradient"></div>
+      {/* <div id="sound-gradient-top"></div> */}
+      <Description />
+      {/* <div id="sound-gradient-bottom"></div> */}
       <div id='player-container'>
       {Playlists.map((e) => {
         return (
@@ -51,6 +54,7 @@ const Sound = () => {
       })
       }
       </div>
+
     </div>
   );
 };
