@@ -57,7 +57,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" style={{backgroundColor: 'black'}}>
+    <AppBar position="sticky" style={{ backgroundColor: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <MusicNoteIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

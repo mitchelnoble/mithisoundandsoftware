@@ -3,7 +3,8 @@ import "../styles/Description.css";
 import GradingIcon from '@mui/icons-material/Grading';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { Button } from "@mui/material";
 
 const Description = () => {
   return (
@@ -23,6 +24,7 @@ const Description = () => {
           <h3>Instrumentals & Stems Ready</h3>
         </li>
       </ul>
+    <Button variant="outline" color="secondary">Learn More <ArrowRightIcon /></Button>
     </div>
   );
 };

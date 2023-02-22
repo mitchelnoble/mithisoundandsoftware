@@ -2,6 +2,7 @@ import React from 'react';
 import Player from '../components/Player';
 import Playlists from '../components/Playlists';
 import Description from '../components/Description';
+import Contact from '../components/Contact'
 import { Button } from '@mui/material';
 import '../styles/Sound.css'
 import { createTheme } from '@mui/material/styles';
@@ -54,7 +55,7 @@ const Sound = () => {
       })
       }
       </div>
-
+    <Contact />
     </div>
   );
 };

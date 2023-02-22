@@ -1,96 +1,31 @@
-import React from 'react';
-import emailjs from "emailjs-com";
-import { Button, Typography, TextField } from "@material-ui/core";
-import SendIcon from "@material-ui/icons/Send";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
-    <div>
-      <div id="contact">
-      <Typography variant="h2" className={classes.title}>Let's get to work</Typography>
-      <br />
-        <Typography variant="subtitle1" className={classes.body}>MitchelParkerNoble@gmail.com
-      <br />
-      or
-      <br />
-       contact me here:</Typography>
-
-      <form onSubmit={sendEmail} className="the-form">
-        <TextField
-          type="text"
-            className={classes.inputs}
-            InputProps={{
-              className: classes.input
-            }}
-            InputLabelProps={{
-              className: classes.input
-            }}
-          placeholder="Name"
-          name="name"
-          color="white"
-          required
-        />
-
-        <TextField
-          type="text"
-            className={classes.inputs}
-            InputProps={{
-              className: classes.input
-            }}
-            InputLabelProps={{
-              className: classes.input
-            }}
-          placeholder="Email"
-          name="email"
-          required
-        />
-
-        <TextField
-          type="text"
-            className={classes.inputs}
-            InputProps={{
-              className: classes.input
-            }}
-            InputLabelProps={{
-              className: classes.input
-            }}
-          placeholder="Subject"
-          name="subject"
-          required
-        />
-
-        <TextField
-            className={classes.inputs}
-            InputProps={{
-              className: classes.input
-            }}
-            InputLabelProps={{
-              className: classes.input
-            }}
-          multiline
-          rows={12}
-          required
-          placeholder="Your Message"
-          name="message"
-        />
-        <Button
-          variant="outlined"
-          color="primary"
-          type="submit"
-            className={classes.button}
-            InputProps={{
-              className: classes.input
-            }}
-            InputLabelProps={{
-              className: classes.input
-            }}
-          value="Send"
-          endIcon={<SendIcon />}
-        >
-          Send
-        </Button>
-      </form>
-    </div>
+    <div id='form-container'>
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
     </div>
   );
 };
