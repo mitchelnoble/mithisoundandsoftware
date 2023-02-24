@@ -14,8 +14,6 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      // main: '#0971f1',
-      // darker: '#053e85',
       main: '#000000',
       darker: '#053e85',
     },
@@ -29,17 +27,16 @@ const theme = createTheme({
 const Sound = () => {
   return (
     <div id="sound">
+        <ThemeProvider theme={theme}>
       <h1 id='headline'>M i t h i <span id='pronounce'>[mee-thē]:</span> i d e a l</h1>
       <h3 id='headline-description'>music for your content</h3>
       <div id='button'>
-        <ThemeProvider theme={theme}>
       <Button
         variant='contained'
           href=''
           size='large'
           color='primary'
       >Let's Talk Music</Button>
-      </ThemeProvider>
       </div>
       {/* <div id="sound-gradient-top"></div> */}
       <Description />
@@ -48,14 +45,15 @@ const Sound = () => {
       {Playlists.map((e) => {
         return (
           <Player
-            playlist={e.playlist}
-            key={e.id}
+          playlist={e.playlist}
+          key={e.id}
           />
-        )
-      })
+          )
+        })
       }
       </div>
-    <Contact />
+      <Contact />
+      </ThemeProvider>
     </div>
   );
 };

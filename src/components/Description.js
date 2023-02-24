@@ -24,7 +24,7 @@ const Description = () => {
           <h3>Instrumentals & Stems Ready</h3>
         </li>
       </ul>
-    <Button variant="outline" color="secondary">Learn More <ArrowRightIcon /></Button>
+      <Button variant="outline" color="secondary" size="large" endIcon={<ArrowRightIcon />}>Learn More </Button>
     </div>
   );
 };

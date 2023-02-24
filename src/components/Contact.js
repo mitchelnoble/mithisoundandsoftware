@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Button, TextField, Typography } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import '../styles/Contact.css'
 
 export const Contact = () => {
@@ -18,15 +21,45 @@ export const Contact = () => {
 
   return (
     <div id='form-container'>
+      <Typography fontFamily={'Fjalla One'} variant="h4"></Typography>
+      <br />
     <form ref={form} onSubmit={sendEmail} id='contact-form'>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <TextField
+          required
+          id="form-name"
+          name="user_name"
+          label="Name"
+          helperText=" "
+          variant='filled'
+        />
+    <TextField
+          required
+          id="form-email"
+          name="user_email"
+          label="Email"
+          helperText=" "
+          variant='filled'
+        />
+    <TextField
+          required
+          id="form-message"
+          name="user_message"
+          label="Message"
+          helperText=" "
+          variant='filled'
+          multiline
+          rows={4}
+        />
+        <Button
+          id='form-send-button'
+          variant='contained'
+          type='submit'
+          component='label'
+          endIcon={<SendIcon />}
+        >
+          Send
+        </Button>
+      </form>
     </div>
   );
 };
