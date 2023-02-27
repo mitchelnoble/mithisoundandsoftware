@@ -1,5 +1,10 @@
+/* #sound {
+} */
+
 #headline {
   margin-top: 2.1em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
   text-align: center;
   font-family: 'Fjalla One', sans-serif;
   font-size: 6.5rem;
@@ -10,7 +15,26 @@
   -moz-text-fill-color: transparent;
 }
 
-#headline-description {
+#headline-description-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: none;
+}
+
+#headline-for-your {
+  margin: 0 0 1em 0;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  background: #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+.headline-description {
   margin: 0 0 1em 0;
   text-align: center;
   font-family: 'Libre Baskerville', serif;
@@ -32,7 +56,7 @@
 }
 
 #player-container {
-  padding: 6.5em 0 0 0;
+  padding: 6.5em 0 4.5em 0;
   background: #FFFFFF;
   display: flex;
   flex-direction: row;

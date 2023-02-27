@@ -21,7 +21,9 @@ export const Contact = () => {
 
   return (
     <div id='form-container'>
-      <Typography fontFamily={'Fjalla One'} variant="h4"></Typography>
+      <Typography fontFamily={'Fjalla One'} variant="h3">Let's Talk Music.</Typography>
+      <br />
+      <Typography fontFamily={'Libre Baskerville'} variant="p">Quick turn-around times, high-quality audio, music that fits just right</Typography>
       <br />
     <form ref={form} onSubmit={sendEmail} id='contact-form'>
     <TextField
@@ -57,7 +59,7 @@ export const Contact = () => {
           component='label'
           endIcon={<SendIcon />}
         >
-          Send
+          Contact me
         </Button>
       </form>
     </div>

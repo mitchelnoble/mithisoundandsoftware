@@ -5,11 +5,14 @@ import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Button } from "@mui/material";
+import Zoom from "@mui/material/Zoom";
 
-const Description = () => {
+const Description = (props) => {
   return (
     <div id="description-container">
+      <Zoom in timeout={props.theme.transitions.duration.longer} easing={props.theme.transitions.easing.easeInOut}>
       <h2 id="description-headline">A one stop shop</h2>
+      </Zoom>
       <ul id="description-list">
         <li>
           <GradingIcon fontSize="large" color="info"/>
