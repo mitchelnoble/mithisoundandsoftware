@@ -1,4 +1,4 @@
-const Playlists = [
+const Playlisting = [
   {
     id: "1",
     album: "For Games",
@@ -13,4 +13,4 @@ const Playlists = [
       "https://soundcloud.com/mitchelparkernoble/sets/rebirth-of-rabbits-foot",
   },
 ];
-export default Playlists;
+export default Playlisting;

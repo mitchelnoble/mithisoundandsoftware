@@ -1,6 +1,6 @@
 import React from 'react';
 import Player from '../components/Player';
-import Playlists from '../components/Playlists';
+import Playlisting from '../components/Playlisting';
 import Description from '../components/Description';
 import Contact from '../components/Contact'
 import { Button, Typography } from '@mui/material';
@@ -75,7 +75,7 @@ const Sound = () => {
       </div>
         <Description theme={theme} />
       <div id='player-container'>
-      {Playlists.map((e) => {
+      {Playlisting.map((e) => {
         return (
           <Player
           playlist={e.playlist}
